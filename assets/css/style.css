@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.4s ease;
+}
+* body {
+  height: 100vh;
+  background: #fff;
+}
+* body header {
+  /*estilos por defecto por componente*/
+  /*Estilos por clase*/
+}
+* body header nav {
+  position: relative;
+  height: 70px;
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #536dfe;
+}
+* body header nav .logo {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+}
+* body header nav ul {
+  display: flex;
+  align-items: center;
+}
+* body header nav ul li {
+  margin: 0 5px;
+  list-style: none;
+  overflow: hidden;
+}
+* body header nav ul li a {
+  padding: 10px;
+  display: inline-block;
+  letter-spacing: 1px;
+  color: #fff;
+}
+* body header nav ul li a:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+* body header nav ul li button {
+  width: 80px;
+  font-size: 14px;
+}
+* body header nav ul li button:focus {
+  outline: none;
+  box-shadow: #d6d6e7 0 0 0 1.5px, rgba(83, 109, 254, 0.4) 0 2px 4px, rgba(83, 109, 254, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+* body header nav ul li button:hover {
+  box-shadow: rgba(83, 109, 254, 0.3) 0 4px 8px, rgba(83, 109, 254, 0.2) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+* body header nav ul li button:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+* body header a {
+  text-decoration: none;
+  position: relative;
+  font-size: 17px;
+  font-weight: 400;
+}
+* body header button {
+  width: 50%;
+  height: 45px;
+  background-color: #eef2ff;
+  border-radius: 8px;
+  color: #536dfe;
+  cursor: pointer;
+  border-color: #536dfe;
+  font-size: 16px;
+  box-shadow: rgba(83, 109, 254, 0.2) 0 2px 4px, rgba(83, 109, 254, 0.15) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transition: box-shadow 0.15s transform 0.15s;
+}
+* body header form {
+  width: 450px;
+}
+* body header h2 {
+  text-align: center;
+  margin: 20px;
+}
+* body header .modal-container {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(77, 77, 77, 0.7);
+  transition: all 0.4s;
+}
+* body header .modal-container.open {
+  visibility: visible;
+  opacity: 1;
+}
+* body header .modal-container .modal-content {
+  border-radius: 4px;
+  position: relative;
+  height: 475px;
+  width: 500px;
+  max-width: 90%;
+  background: #fff;
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+* body header .modal-container .modal-content .fa-times {
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+* body header .modal-container .modal-content .form-control {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  transform: 0.3s;
+}
+* body header .modal-container .modal-content .form-control label {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  color: #536dfe;
+  transition: 0.3s;
+}
+* body header .modal-container .modal-content .form-control input {
+  outline: none;
+  border: none;
+  padding: 4px 0 0;
+  font-size: 14px;
+}
+* body header .modal-container .modal-content .form-control:focus-within {
+  border-color: #8c7569;
+}
+* body header .modal-container .modal-content .form-control:focus-within label {
+  color: #8c7569;
+}
+* body header .modal-container .modal-content .form-control-others {
+  margin: 5% auto;
+  text-align: center;
+}
+* body header .modal-container .modal-content .form-control-others .forget,
+* body header .modal-container .modal-content .form-control-others .terms {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+* body header .modal-container .modal-content .form-control-others .forget label,
+* body header .modal-container .modal-content .form-control-others .terms label {
+  position: unset;
+  cursor: pointer;
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 14px;
+}
+* body header .modal-container .modal-content .registration {
+  position: absolute;
+  transform: translate(500px);
+}/*# sourceMappingURL=style.css.map */
